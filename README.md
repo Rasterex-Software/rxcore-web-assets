@@ -1,15 +1,16 @@
-# RxCore Web Assets
+# Rasterex Web SDK – Runtime Assets
 
-This repository contains the **canonical runtime assets** required to run the
-RxCore Web Viewer.
+This repository contains the **canonical runtime assets** required to run a
+minimal implementation of the **Rasterex Web SDK**.
 
-It is framework-agnostic and designed to support:
+It is framework-agnostic and intended for:
+- minimal, custom integrations
 - documentation examples
-- AI-generated integrations
-- minimal and full-featured viewer deployments
+- AI-generated SDK usage
+- environments that do not use the Angular-based Web Viewer
 
-The contents and structure of this repository are treated as **contractual** by
-the RxCore documentation.
+The contents and structure of this repository are treated as **contractual**
+by the Rasterex SDK documentation.
 
 ---
 
@@ -17,17 +18,18 @@ the RxCore documentation.
 
 This repository answers one question:
 
-> **What runtime assets must exist on disk for RxCore Web Viewer to initialize and run correctly?**
+> **What runtime assets must exist on disk for the Rasterex Web SDK to initialize and run correctly?**
 
 It provides:
 - A canonical `/assets` runtime layout
 - Supporting runtime files (scripts, fonts, HTML helpers, vendor folders)
-- Minimal, authoritative documentation describing runtime expectations
+- Minimal, authoritative documentation describing boot-time expectations
 
 It does **not** contain:
+- Framework-specific implementations (Angular, React, build tooling)
+- UI application logic
 - Capability contracts (see `rxcore-capabilities`)
-- Framework-specific code (Angular, React, build tooling)
-- Full product or API documentation
+- The Angular-based Rasterex Web Viewer
 
 ---
 
@@ -46,16 +48,19 @@ both humans and AI agents.
 
 ---
 
-## Relationship to other repositories
+## Relationship to other projects
 
 - **rxcore-capabilities**  
   Defines AI-first, machine-readable capability contracts
-  (what RxCore can do and how it is invoked).
+  (what the Rasterex Web SDK can do and how it is invoked).
 
-- **rxcore-web-assets** (this repository)  
-  Defines the runtime assets required for those capabilities to function.
+- **Angular Web Viewer (separate project)**  
+  A full-featured application built on top of the Rasterex Web SDK.
+  It has its own repository, build system, and asset pipeline.
 
-The two repositories are complementary and should be used together.
+- **This repository**  
+  Defines the **minimum runtime asset baseline** required by the Rasterex Web SDK,
+  independent of any application framework.
 
 ---
 
@@ -70,5 +75,5 @@ The two repositories are complementary and should be used together.
 
 ## Status
 
-This repository is used as a **canonical reference** for runtime setup in
-documentation, examples, and AI-generated viewer integrations.
+This repository is used as a **canonical reference** for minimal runtime setup
+in documentation, examples, and AI-generated Rasterex Web SDK integrations.
