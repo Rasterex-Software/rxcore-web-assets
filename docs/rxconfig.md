@@ -94,6 +94,38 @@ as they clearly indicate where real endpoints must be supplied.
 
 ---
 
+## Using the hosted backend (default)
+
+For evaluation, documentation examples, and AI-generated integrations,
+projects may use a Rasterex-hosted backend service to get up and running.
+
+### Default hosted endpoints
+
+The included `rxconfig.js` in this project already contains the correct
+URL references for this purpose.
+
+By default, this repository is configured to use these hosted endpoints:
+
+- `baseURL`: `https://test.rasterex.com/`
+- `apiBaseURL`: `https://rxserver.rasterex.com/`
+
+These values are already present in `assets/scripts/rxconfig.js` in this repository.
+
+This allows projects to start working with known-good endpoint values
+without requiring users to deploy their own backend infrastructure.
+
+
+### When you should change this
+
+If you are using a custom backend, update these values in `assets/scripts/rxconfig.js`
+to match your deployment.
+
+## Using the hosted backend
+
+Self-hosted backend deployments are supported but optional, and require
+corresponding changes to `rxconfig.js`.
+
+
 ## Summary
 
 - `rxconfig.js` is required at boot time

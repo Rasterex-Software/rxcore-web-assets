@@ -64,6 +64,32 @@ both humans and AI agents.
 
 ---
 
+## Getting started with a backend
+
+To get started quickly, a project can operate against an **existing Rasterex-hosted backend server**.
+
+This allows developers to:
+- Initialize the Rasterex Web SDK
+- Upload and open documents
+- Exercise server-assisted functionality
+
+**without** first setting up their own backend infrastructure.
+
+Using the hosted backend is intended as a **starter and evaluation path**.
+
+---
+
+## Custom backend deployments
+
+It is also possible to deploy and operate against a **self-hosted backend server**.
+This is typically done for production, on-premise, or tightly controlled environments.
+
+Backend setup, deployment, and configuration are outside the scope of this repository.
+When using a custom backend, `rxconfig.js` must be updated accordingly.
+
+See `docs/rxconfig.md` for details on how backend endpoints are configured.
+
+
 ## Notes
 
 - Some third-party dependencies (e.g. Foxit PDF SDK) may not be redistributable
